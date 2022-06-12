@@ -44,6 +44,12 @@ let Game = new GameSession()
 
 function call_click() {
     Game.add_coins(Game.clikc_power)
+
+    if (call_click=true)
+        playAudio()
+    else
+         playAudio(false)
+
 }
 
 function render() {
@@ -202,4 +208,11 @@ window.onload = function () {
     Game.init() 
     setAutoClick() 
     setAutoSave() 
+}
+
+
+function playAudio() {
+    var myAudio = new Audio;
+    myAudio.src = "/static/musicc/standing-here-i-realize-but-in-hd-and-extended.mp3";
+    myAudio.play();
 }
