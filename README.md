@@ -1,5 +1,5 @@
-![](\screens\eawhdfjkck.PNG)
-Вход в существующий если вы уже смешарик
+![](/screens/eawhdfjkck.PNG)
+Вход в существующий акк если вы уже смешарик
 
 
 ![](/screens/eawhdfjkck.PNG)
