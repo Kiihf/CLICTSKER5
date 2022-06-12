@@ -1,0 +1,22 @@
+{% load static %}
+<html lang="en"> 
+<head> 
+    <title>Войти в существующий аккаунт</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head> 
+<body> 
+    <div style=" vertical-align:middle; height:100px; line-height:100px; width:1000px; text-align:center;">
+        <h1 style="text-align:center; border: groove 1em red; border-radius: 2em; background: white;">Войти</h1>
+        <form action="{% url 'login' %}" method='POST'> 
+            {% csrf_token %} 
+            {{ form.username }} 
+            {{ form.password }} 
+            {% if invalid %} 
+                <p>Попробуйте снова</p>
+            {% endif %} 
+            <input type="submit"> 
+        </form>
+        <a href="{% url 'register' %}">Зарегистрироваться</a>
+    </div>
+</body> 
+</html>

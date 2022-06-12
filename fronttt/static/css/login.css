@@ -1,0 +1,24 @@
+ body{
+    background-image: url(https://sun9-west.userapi.com/sun9-39/s/v1/ig2/O-rfuj0uqKGcNLg89kQWkT3hcvPsgY6ua_9fBKi8bTJE3eAkqMtUwbxpZHt-wpJDfnPETCG3Ob4jHt8Fn7dtdFir.jpg?size=1920x960&quality=95&type=album);
+    text-align: center;
+
+} 
+
+input{
+
+    border: 1px solid rgb(238, 200, 130);
+    border-spacing: 7px 11px;
+    background-color: rgb(240, 246, 248);
+    border-radius: 1px;
+
+
+} 
+a{
+
+    border: groove 1em silver;
+    border-radius: 2em;
+    background: white;
+    vertical-align:middle;
+    text-align:center;
+
+}

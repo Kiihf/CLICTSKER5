@@ -1,0 +1,81 @@
+{% load static %}
+<html lang="ru"> 
+<head> 
+    <title>Лучший кликер на планете</title>     
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+</head> 
+<body>
+    <main class="app">
+        <nav class="nav">
+            Привет, {{ user.username }}
+            <a href="{% url 'logout' %}">Выйти</a>
+
+            <h3>Достижения</h3> 
+            <div class="ds">
+            {% if core.clikc_power >= 10 %}
+                <p class="power_d"> Click it baby!: 10 </p>
+            {% endif %}
+            {% if core.clikc_power >= 100 %}
+                <p class="power_d"> Click it baby!: 100 </p>
+            {% endif %}
+            {% if core.clikc_power >= 200 %}
+                <p class="power_d"> Click it baby!: 200 </p>
+            {% endif %}
+            {% if core.clikc_power >= 300 %}
+                <p class="power_d"> Click it baby!: 300 </p>
+            {% endif %}
+            {% if core.clikc_power >= 500 %}
+                <p class="power_d"> Click it baby!: 500 </p>
+            {% endif %}
+            {% if core.clikc_power >= 1000 %}
+                <p class="power_d"> Click it baby!: 1000 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 10 %}
+                <p class="power_ad"> CИЛА: 10 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 100 %}
+                <p class="power_ad"> CИЛА: 100 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 200 %}
+                <p class="power_ad"> CИЛА: 200 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 300 %}
+                <p class="power_ad"> CИЛА: 130 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 500 %}
+                <p class="power_ad"> CИЛА: 500 </p>
+            {% endif %}
+            {% if core.auto_click_power >= 1000 %}
+                <p class="power_ad"> CИЛА: 1000 </p>
+            {% endif %}
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class = 'coinss' id='coins'>{{core.coins}}</div>
+            <img class='img' src= "{% static 'imgs/672.png' %}" id="672" onclick="call_click()">
+            <p>
+                Power of nanomachines!!! : <span id="clikc_power">{{ core.clikc_power }}</span>
+            </p>
+            <p>  
+                Буритос: <span id="auto_click_power">{{ core.auto_click_power }}</span>
+            </p>
+            <button class="save" onclick="setSave()">Save ASS</button>
+        </div>
+
+        <aside class="boosts" id="boosts"> 
+            <h3>Звуквые улучшения жопы</h3>
+            <div class="boosts-holder" id="boosts-holder"> 
+                {% for boost in boosts %} 
+                    <button class="boost_{{boost.type}}" id="boost_{{boost.id}}" onclick="buy_boost({{boost.id}})"> 
+                        <p>lvl: <span id="boost_level">{{boost.level}}</span></p> 
+                        <p>+<span id="boost_power">{{boost.power}}</span></p> 
+                        <p><span id="boost_price">{{boost.price}}</span></p> 
+                    </button> 
+                {% endfor %} 
+            </div> 
+        </aside>
+    </main>
+</body> 
+</html>

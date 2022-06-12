@@ -1,0 +1,22 @@
+{% load static %}
+<html lang="en"> 
+<head> 
+    <title>Регистрация </title> 
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head> 
+<body>
+    <div style=" width:400px; height:300px; border: groove 1em red; border-radius: 2em; background: white; vertical-align:middle; text-align:center;">
+        <h1>Регистрация</h1>
+        {% if form.errors %} 
+            <p>{{form.errors}}</p> 
+        {% endif %} 
+        <form action="{% url 'register' %}" method='POST'> 
+            {% csrf_token %} 
+            {{ form.as_p }} 
+            <input type="submit"> 
+        </form> 
+        <a href="{% url 'login' %}">Уже зарегистрированы?</a>
+    </div>
+     <img src="https://c.tenor.com/TbLpG9NCzjkAAAAC/bonk.gif"/>
+</body>
+</html>
