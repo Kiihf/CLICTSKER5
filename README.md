@@ -1,4 +1,4 @@
-![](/screens/eawhdfjkck.PNG)
+![](/screens/sdehdfjkfgk.PNG)
 Вход в существующий акк если вы уже смешарик
 
 
